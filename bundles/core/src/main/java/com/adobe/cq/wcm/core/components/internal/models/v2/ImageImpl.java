@@ -16,6 +16,8 @@
 package com.adobe.cq.wcm.core.components.internal.models.v2;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nonnull;
 import javax.annotation.PostConstruct;
@@ -106,9 +108,7 @@ public class ImageImpl extends com.adobe.cq.wcm.core.components.internal.models.
 
     @Nonnull
     @Override
-    public int[] getWidths() {
-        return Arrays.copyOf(smartSizes, smartSizes.length);
-    }
+    public List<Integer> getWidths() { return Arrays.stream(smartSizes).boxed().collect(Collectors.toList()); }
 
     @Override
     public String getSrcUriTemplate() {

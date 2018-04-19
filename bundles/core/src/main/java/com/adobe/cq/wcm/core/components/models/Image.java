@@ -15,6 +15,7 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package com.adobe.cq.wcm.core.components.models;
 
+import java.util.List;
 import javax.annotation.Nonnull;
 
 import org.osgi.annotation.versioning.ConsumerType;
@@ -207,7 +208,7 @@ public interface Image extends ComponentExporter {
      * @since com.adobe.cq.wcm.core.components.models 12.2.0
      */
     @Nonnull
-    default int[] getWidths() {
+    default List<Integer> getWidths() {
         throw new UnsupportedOperationException();
     }
 
